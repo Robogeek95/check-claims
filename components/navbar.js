@@ -54,7 +54,9 @@ export default function Navbar() {
                 </Flex>
 
                 <Flex align={'center'} flex={{ base: 1 }} justify={{ base: 'center', md: 'space-between' }}>
-                    <Logo />
+                    <Link href="/">
+                        <Logo />
+                    </Link>
 
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />
@@ -276,7 +278,7 @@ const NAV_ITEMS = [
     },
     {
         label: 'Demo',
-        href: '#',
+        href: '/demo',
     },
     {
         label: 'Contact Us',

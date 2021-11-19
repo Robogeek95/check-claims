@@ -12,10 +12,15 @@ import {
     Text,
     useColorModeValue,
 } from '@chakra-ui/react';
+import Navbar from '../components/navbar';
+import Footer from '../components/sections/footer';
 
 export default function Login() {
     return (
-        <Flex
+       <>
+       <Navbar />
+
+       <Flex
             minH={'100vh'}
             align={'center'}
             justify={'center'}
@@ -30,5 +35,8 @@ export default function Login() {
          
             </Stack>
         </Flex>
+
+        <Footer />
+       </>
     );
 }

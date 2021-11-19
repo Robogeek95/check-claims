@@ -54,9 +54,9 @@ import Logo from '../Logo';
           align={'center'}>
           <Logo />
           <Stack direction={'row'} spacing={6}>
-            <Link href={'#'}>Home</Link>
+            <Link href={'/'}>Home</Link>
             <Link href={'#'}>Product</Link>
-            <Link href={'#'}>Demo</Link>
+            <Link href={'/demo'}>Demo</Link>
             <Link href={'#'}>Contact</Link>
           </Stack>
         </Container>
