@@ -12,6 +12,7 @@ import {
     Text,
     useColorModeValue,
 } from '@chakra-ui/react';
+import Logo from '../components/Logo';
 
 export default function Login() {
     return (
@@ -22,9 +23,12 @@ export default function Login() {
             bg={useColorModeValue('gray.50', 'gray.800')}>
             <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
                 <Stack align={'center'}>
-                    <Heading fontSize={'4xl'}>Create your account</Heading>
+                    <Link href='/' my={8}>
+                        <Logo />
+                    </Link>
+                    <Heading fontSize={'4xl'}>Welcome back</Heading>
                     <Text fontSize={'lg'} color={'gray.600'}>
-                        to enjoy all of our cool <Link color={'blue.400'}>features</Link> ✌️
+                        Login to your account ✌️
                     </Text>
                 </Stack>
                 <Box
@@ -47,7 +51,7 @@ export default function Login() {
                                 align={'start'}
                                 justify={'space-between'}>
                                 <Checkbox>Remember me</Checkbox>
-                                <Link color={'blue.400'}>Forgot password?</Link>
+                                <Link color={'blue.400'} href='/forgot-password'>Forgot password?</Link>
                             </Stack>
 
                             <Stack>
@@ -57,7 +61,7 @@ export default function Login() {
                                     _hover={{
                                         bg: 'blue.500',
                                     }}>
-                                    Sign in
+                                    Continue
                                 </Button>
 
                                 <Box pt="4" px={18}>
@@ -65,14 +69,13 @@ export default function Login() {
                                 </Box>
 
                                 <Button
-                                    color={'white'}
                                     variant="ghost"
                                     as="a"
                                     href="/signup"
                                     _hover={{
-                                        bg: 'gray.800',
+                                        bg: useColorModeValue('gray.200', 'blue.800'),
                                     }}>
-                                    Sign up
+                                    Create a new account
                                 </Button>
                             </Stack>
                         </Stack>
