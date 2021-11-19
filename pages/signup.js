@@ -12,6 +12,7 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
+import Logo from '../components/Logo';
 
 export default function Signup() {
   return (
@@ -22,9 +23,11 @@ export default function Signup() {
       bg={useColorModeValue('gray.50', 'gray.800')}>
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
-          <Heading fontSize={'4xl'}>Sign in to your account</Heading>
-          <Text fontSize={'lg'} color={'gray.600'}>
-            to enjoy all of our cool <Link color={'blue.400'}>features</Link> ✌️
+          <Link href='/' my={8}>
+            <Logo />
+          </Link>
+          <Heading fontSize={'4xl'}>Create your account</Heading>
+          <Text fontSize={'lg'} color={'gray.600'}>Let&apos;s get you started ✌️
           </Text>
         </Stack>
         <Box
@@ -60,14 +63,13 @@ export default function Signup() {
               </Box>
 
               <Button
-                color={'white'}
                 variant="ghost"
                 as="a"
                 href="/login"
                 _hover={{
-                  bg: 'gray.800',
+                  bg: useColorModeValue('gray.200', 'blue.800'),
                 }}>
-                Sign in
+                Already have an account?
               </Button>
             </Stack>
           </Stack>
