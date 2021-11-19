@@ -46,6 +46,7 @@ import {
                 px={6}
                 colorScheme={'red'}
                 bg={'cyan.700'}
+                as="a" href="/login"
                 _hover={{ bg: 'red.500' }}>
                 Get started
               </Button>
